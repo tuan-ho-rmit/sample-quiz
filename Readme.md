@@ -7,25 +7,27 @@ Extract it to the local folder. You decide the location of your folder, i.e.
 /Users/v111233/Downloads/mongodbCreate a variable named $MONGO_HOME
 which points to that local folder.**
 0 words 
-* Set the download URL to a variable
+
+```bash
+# Set the download URL to a variable
 MONGODB_DOWNLOAD_URL="https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-ubuntu2004-4.4.0.tgz"
 
-* Set the local folder path
+# Set the local folder path
 LOCAL_FOLDER="/Users/v111233/Downloads/mongodb"
 
-* Download MongoDB zip or gzip file
+# Download MongoDB zip or gzip file
 wget "$MONGODB_DOWNLOAD_URL" -O mongodb.tgz
 
-* Create the local folder if it doesn't exist
+# Create the local folder if it doesn't exist
 mkdir -p "$LOCAL_FOLDER"
 
-* Extract the downloaded file to the local folder
+# Extract the downloaded file to the local folder
 tar -zxvf mongodb.tgz -C "$LOCAL_FOLDER" --strip-components=1
 
-* Set the MONGO_HOME variable
+# Set the MONGO_HOME variable
 export MONGO_HOME="$LOCAL_FOLDER"
 
-* Display a message indicating successful completion
+# Display a message indicating successful completion
 echo "MongoDB has been downloaded, extracted, and \$MONGO_HOME is set to $MONGO_HOME"
 
 
