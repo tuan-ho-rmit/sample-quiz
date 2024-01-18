@@ -7,25 +7,25 @@ Extract it to the local folder. You decide the location of your folder, i.e.
 /Users/v111233/Downloads/mongodbCreate a variable named $MONGO_HOME
 which points to that local folder.**
 0 words 
-# Set the download URL to a variable
+* Set the download URL to a variable
 MONGODB_DOWNLOAD_URL="https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-ubuntu2004-4.4.0.tgz"
 
-# Set the local folder path
+* Set the local folder path
 LOCAL_FOLDER="/Users/v111233/Downloads/mongodb"
 
-# Download MongoDB zip or gzip file
+* Download MongoDB zip or gzip file
 wget "$MONGODB_DOWNLOAD_URL" -O mongodb.tgz
 
-# Create the local folder if it doesn't exist
+* Create the local folder if it doesn't exist
 mkdir -p "$LOCAL_FOLDER"
 
-# Extract the downloaded file to the local folder
+* Extract the downloaded file to the local folder
 tar -zxvf mongodb.tgz -C "$LOCAL_FOLDER" --strip-components=1
 
-# Set the MONGO_HOME variable
+* Set the MONGO_HOME variable
 export MONGO_HOME="$LOCAL_FOLDER"
 
-# Display a message indicating successful completion
+* Display a message indicating successful completion
 echo "MongoDB has been downloaded, extracted, and \$MONGO_HOME is set to $MONGO_HOME"
 
 
@@ -35,26 +35,26 @@ execute), group (read write), others (read only). Write a Linux command to creat
 file named final.txt. This file contains the text: “Final test is easy”. Change
 permissions of that file to: owner (read write), group (read), others (none)**
 
-# Create a folder named 'iit2022a'
+* Create a folder named 'iit2022a'
 mkdir iit2022a
 
-# Change permissions of the folder to: owner (read write execute), group (read write), others (read only)
+* Change permissions of the folder to: owner (read write execute), group (read write), others (read only)
 chmod 751 iit2022a
 
-# Navigate to the created folder
+* Navigate to the created folder
 cd iit2022a
 
-# Write the text "Final test is easy" to a file named 'final.txt'
+* Write the text "Final test is easy" to a file named 'final.txt'
 echo "Final test is easy" > final.txt
 
-# Change permissions of the file to: owner (read write), group (read), others (none)
+* Change permissions of the file to: owner (read write), group (read), others (none)
 chmod 640 final.txt
 
 
 **Write a bash script to print Hello World 1000 times.**
 #!/bin/bash
 
-# Loop to print "Hello World" 1000 times
+* Loop to print "Hello World" 1000 times
 for ((i=1; i<=1000; i++)); do
     echo "Hello World"
 done
